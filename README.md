@@ -4,8 +4,6 @@ ORFDiscovery is a miniprogram for searching and analysing Open Reading Frames (O
 
 The purpose of this code is not to show that lncRNAs all have coding potential - that requires wet-lab testing. The purpose is to serve as a platform for examining whether gene sequences of interest, described as lncRNAs, could potentially code for protein. Examining the distributions of ORF length within the sequence offers an indication of whether protein detection should be performed.
 
-This code was developed for Markus William Pleijzier's final year MSci project in the Neural Development, Plasticity & Repair Wing, Wolfson Institute of Biomedical Research, University College London, under Dr Huiliang Li. The title of the thesis which used this code was '_Expression of a novel lncRNA in Mouse Spinal Cord Oligodendrocytes_'.
-
 ## Installation
 ### Prerequisites
 
@@ -161,6 +159,10 @@ Once we have the dataframe, now stored in `Measuring_DF` we can easily plot a ba
 ```python
 Measuring_DF.plot.bar()
 ```
+
+![first-bar](https://github.com/markuspleijzier/ORFDiscovery/blob/master/images/Bar%20chart%20from%20measuringORFs.png)
+
+
 If we want to look at the histogram of the length distribution then simply code
 
 ```python
@@ -168,6 +170,9 @@ fig, ax = plt.subplots()
 n, bins, patches = plt.hist(LENGTHS, bins = 'auto')
 plt.show()
 ```
+![histogram](https://github.com/markuspleijzier/ORFDiscovery/blob/master/images/Histogram%20of%20ORF%20amino%20acid%20polypeptides.png)
+
+
 Finally, if we want to see a bar chart where the x axis is continuous, showing the individual peaks for ORF length frequencies then we have to rerun our `ORF_lengths()` function but this time set the `counter` argument equal to True. 
 
 ```python
@@ -181,5 +186,19 @@ plt.bar(LENGTHS[0], LENGTHS[1])
 plt.show()
 ```
 
+![2bar](https://github.com/markuspleijzier/ORFDiscovery/blob/master/images/Bar%20chart%20of%20ORF%20length%20frequency%20sizes.png)
+
 ___________________________________
+
+
+# Acknowledgements
+This code was developed for Markus William Pleijzier's final year MSci project in the Neural Development, Plasticity & Repair Wing, Wolfson Institute of Biomedical Research, University College London, under Dr Huiliang Li. The title of the thesis which used this code was '_Expression of a novel lncRNA in Mouse Spinal Cord Oligodendrocytes_'.
+
+# Verioning
+
+* 01/11/2018 = Version 1.0
+
+# License
+
+GNU General Public License v3.0
 
